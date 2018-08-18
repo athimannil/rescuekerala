@@ -79,7 +79,7 @@ p.home-info{
     max-width: 800px;
     margin:30px auto 0;
 }
-form{
+form:not(.panel-form){
     width:96%;
     margin: 20px auto;
     max-width: 600px;

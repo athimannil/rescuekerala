@@ -3,44 +3,65 @@
 
 {% block content %}
 
-<h1 class="text-center">To Contribute</h1>
-<h2 class="text-center">സംഭാവന നല്‍കാന്‍</h2>
-  <form method="post">
-    <b class="text-center"> You can also contribute to Chief Minister's Fund:<br>
-      മുഖ്യമന്തിയുടെ ദുരിതാശ്വാസ നിധിയിലേക്ക് സംഭാവന ചെയ്യാം<br/><br>
-      <table class="table">
-        <tr>
-          <td>Account number</td> <td>67319948232</td>
-        </tr>
-        <tr>
-          <td>Name on Account</td> <td>Chief Minister's Distress Relief Fund</td>
-        </tr>
-        <tr>
-          <td>Account Type</td> <td>Savings</td>
-        </tr>
-        <tr>
-          <td>Bank</td> <td>SBI</td>
-        </tr>
-        <tr>
-          <td>Branch</td> <td>City Branch, TVM</td>
-        </tr>
-        <tr>
-          <td>IFS Code</td> <td>SBIN0070028</td>
-        </tr>
-        <tr>
-          <td>SWIFT Code</td> <td>SBININBBT08</td>
-        </tr>
+<div class="row">
+  <div class="col-xs-12">
+    <h1 class="text-center">To Contribute</h1>
+    <h2 class="text-center">സംഭാവന നല്‍കാന്‍</h2>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-sm-offset-3 form-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">You can also contribute to Chief Minister's Fund:</div>
+      <div class="panel-body">മുഖ്യമന്തിയുടെ ദുരിതാശ്വാസ നിധിയിലേക്ക് സംഭാവന ചെയ്യാം</div>
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <th>Account number</th>
+            <td>67319948232</td>
+          </tr>
+          <tr>
+            <th>Name on Account</th>
+            <td>Chief Minister's Distress Relief Fund</td>
+          </tr>
+          <tr>
+            <th>Account Type</th>
+            <td>Savings</td>
+          </tr>
+          <tr>
+            <th>Bank</th>
+            <td>SBI</td>
+          </tr>
+          <tr>
+            <th>Branch</th>
+            <td>City Branch, TVM</td>
+          </tr>
+          <tr>
+            <th>IFS Code</th>
+            <td>SBIN0070028</td>
+          </tr>
+          <tr>
+            <th>SWIFT Code</th>
+            <td>SBININBBT08</td>
+          </tr>
+        </tbody>
       </table>
-      <a href="https://donation.cmdrf.kerala.gov.in/">Donate to Chief Minister's Fund Online</a>
-    </b><br><br>
-  {% csrf_token %}
-  {% bootstrap_form form %}
-  {% buttons %}
-  <button type="submit" class="btn btn-primary">
-  {% bootstrap_icon "star" %} Submit
-  </button>
-  {% endbuttons %}
-  </form>
+      <div class="panel-footer">
+        <a href="https://donation.cmdrf.kerala.gov.in/">Donate to Chief Minister's Fund Online</a>
+      </div>
+      <div class="panel-body"> 
+        <form class="panel-form" method="post">
+          {% csrf_token %}
+          {% bootstrap_form form %}
+          {% buttons %}
+          <hr>
+          <button type="submit" class="btn btn-primary pull-right">
+            {% bootstrap_icon "star" %} Submit
+          </button>
+          {% endbuttons %}
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
     window.onload = function() {
         $("#id_phone").attr('type', 'number');
